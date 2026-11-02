@@ -1,8 +1,3 @@
-// CIS 3830 - Week 9: Learning the JavaScript Language
-// Colton Reynolds
-// Run with: node learning-js.js
-
-// ---------- Object model ----------
 class SoundClip {
   constructor(name, seconds, volume) {
     this.name = name;
@@ -27,7 +22,6 @@ class VoiceClip extends SoundClip {
   }
 }
 
-// ---------- Arrays ----------
 const clips = [
   new SoundClip('pellet', 0.2, 0.8),
   new SoundClip('ghost', 1.5, 0.6),
@@ -35,8 +29,6 @@ const clips = [
   new SoundClip('game-over', 2.5, 0.9),
 ];
 
-// ---------- Asynchronous logic ----------
-// Pretends to load a clip from disk, like fetch() would in the browser.
 function loadClip(clip) {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -51,7 +43,6 @@ async function loadAll(list) {
   return results;
 }
 
-// ---------- Validation checks ----------
 let passed = 0;
 let failed = 0;
 
@@ -71,7 +62,6 @@ async function main() {
     console.log(clip.describe());
   }
 
-  // array tracking loop
   let totalSeconds = 0;
   for (let i = 0; i < clips.length; i++) {
     totalSeconds += clips[i].seconds;
